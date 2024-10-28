@@ -9,16 +9,12 @@ public class Dream2 : MonoBehaviour
     {
         string[] words = {"Cat", "Dog", "Car", "Pizza", "Hat", "Fish", "Tree", "Monkey", "Ball", "Bird"};
         int attempt = 0;
+        string sentence = "";
         while (attempt < words.Length)
         {
-            string firstWord = words[Random.Range(0,words.Length)];
-            string secWord = words[Random.Range(0,words.Length)];
-            while (firstWord == secWord)
-                {
-                    secWord = words[Random.Range(0,words.Length)];
-                }
-            Debug.Log(firstWord+" "+secWord);
+            sentence += $"{words[Random.Range(0,words.Length)]} ";
             attempt++;   
         }
+        Debug.Log(sentence);
     }
 }
